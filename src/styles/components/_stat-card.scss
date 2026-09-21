@@ -1,0 +1,32 @@
+@use '../utils/variables' as vars;
+
+.stat-card {
+  background-color: vars.$color-bg-sidebar-white;
+  font-family: vars.$font-main;
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  border: 1px solid vars.$color-border;
+
+  &__count {
+    font-size: vars.$font-size-big;
+    color: vars.$first-color;
+    font-weight: 700;
+    margin: 16px auto 8px 16px;
+
+    &--active {
+      color: vars.$color-accent;
+    }
+
+    &--completed {
+      color: vars.$color-success;
+    }
+  }
+
+  &__status {
+    font-size: vars.$font-size-main;
+    color: vars.$second-color;
+    text-transform: uppercase;
+    margin: 0 auto 16px 16px;
+  }
+}
