@@ -7,6 +7,7 @@
 
   .sidebar {
     background-color: $color-bg-sidebar-white;
+    @include typography();
   }
 
   .main {
