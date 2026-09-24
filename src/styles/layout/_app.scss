@@ -1,26 +1,27 @@
-@use '../utils/variables' as vars;
+@use '../utils/variables' as *;
 
 .app {
   display: grid;
   grid-template-columns: 280px 1fr;
   min-height: 100vh;
 
-  &__sidebar {
-    background-color: vars.$color-bg-sidebar-white;
+  .sidebar {
+    background-color: $color-bg-sidebar-white;
   }
 
-  &__main {
-    background-color: vars.$color-bg-white;
+  .main {
+    background-color: $color-bg-white;
 
-    &__container {
+    .inner {
       max-width: 1032px;
       margin: 0 auto;
+
+      .stats {
+        gap: $spacing-md;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
   }
 }
 
-.app__stats {
-  gap: vars.$spacing-md;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
