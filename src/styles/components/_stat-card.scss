@@ -1,0 +1,32 @@
+@use '../utils/variables' as *;
+
+.stat-card {
+  background-color: $color-bg-sidebar-white;
+  font-family: $font-main;
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  border: 1px solid $color-border;
+
+  &__count {
+    font-size: $font-size-big;
+    color: $first-color;
+    font-weight: 700;
+    margin: 16px auto 8px 16px;
+
+    &--active {
+      color: $color-accent;
+    }
+
+    &--completed {
+      color: $color-success;
+    }
+  }
+
+  &__status {
+    font-size: $font-size-main;
+    color: $second-color;
+    text-transform: uppercase;
+    margin: 0 auto 16px 16px;
+  }
+}
