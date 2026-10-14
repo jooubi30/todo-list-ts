@@ -8,14 +8,26 @@
 <body>
   <div id="app">
     <div class="app">
-      <aside class="sidebar"></aside>
+      <aside class="sidebar">
+        <div class="sidebar__inner">
+          <a class="logo" href="#">
+            <img class="logo__image" src="src/images/logo.svg" alt="Логотип TaskFlow">
+            <h2 class="logo__text">TaskFlow</h2>
+          </a>
+          <nav class="navigation">
+            <ul class="navigation__list"></ul>
+          </nav>
+        </div>
+      </aside>
       <main class="main">
         <div class="inner">
+          <h1 class="hero-title">Todo List</h1>
+          <p class="hero-description">Manage your daily tasks and keep track of your performance.</p>
           <div class="stats"></div>
         </div>
       </main>
     </div>
   </div>
-  <script type="module" src="/src/main.ts"></script>
+  <script type="module" src="./src/main.ts"></script>
 </body>
 </html>

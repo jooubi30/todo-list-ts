@@ -7,7 +7,27 @@
 
   .sidebar {
     background-color: $color-bg-sidebar-white;
-    @include typography();
+
+    &__inner {
+      max-width: 240px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      display: inline-flex;
+      margin-top: 24px;
+      margin-bottom: $spacing-lg;
+      text-decoration: none;
+      
+
+      .logo__text {
+        margin-left: 8px;
+        color: $first-color;
+        font-size: 18px;
+        font-weight: 700;
+        margin-top: 3px;
+      }
+    }
   }
 
   .main {
@@ -16,6 +36,19 @@
     .inner {
       max-width: 1032px;
       margin: 0 auto;
+
+      .hero-title {
+        font-size: $font-size-big;
+        font-weight: 700;
+        color: $first-color;
+        margin-top: 48px;
+      }
+
+      .hero-description {
+        font-size: $font-size-main;
+        color: $second-color;
+        margin-bottom: $spacing-lg;
+      }
 
       .stats {
         gap: $spacing-md;

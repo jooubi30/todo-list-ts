@@ -1,0 +1,65 @@
+@use '../utils/variables' as *;
+
+.navigation {
+  &__item {
+    margin-bottom: $spacing-xs;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    padding: 10.5px 12px;
+    border-radius: 8px;
+    background-color: $color-bg-sidebar-white;
+    color: $second-color; 
+    text-decoration: none;
+
+    &--active {
+      background-color: #eef2ff;
+      color: $color-accent;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    width: 18px;
+    height: 18px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__text {
+    margin-left: 12px;
+    font-size: $font-size-main;
+    font-weight: 600;
+    
+  }
+
+  &__count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 24px;
+    height: 19px;
+    margin-left: auto;
+    padding: 0 $spacing-xs;
+    border-radius: 999px;
+    background-color: $color-bg-white;
+    font-size: 12px;
+    font-weight: 600;
+    color: $third-color;
+  }
+
+  &__link--active &__count {
+    color: $color-accent;
+    background-color: $color-bg-sidebar-white;
+    border: 1px solid $color-border;
+  }
+}
